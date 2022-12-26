@@ -1,22 +1,31 @@
 body{
-    background-image: url("./assets/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    top: 0;
-    left: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.content__plantilla{
+    background-image: url("./assets/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
 /* logo */
-.content__logo{
+.content__logo {
     width: 80vw;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -5%);
     margin-left: auto;
     margin-right: auto;
     margin-top: 150px;
@@ -27,11 +36,15 @@ body{
 }
 
 .content__logo .logo a{
-    font-size: 2em;
+    font-size: 2.25em;
     color: #e1bd33;
     font-weight: bold;
     text-shadow: 1px 2px 7px rgba(0,0,0,0.61);
     margin: 0;
+}
+
+.content__logo .logo a:hover{
+    color: #199e43;
 }
 
 .content__button{
@@ -44,7 +57,7 @@ body{
 
 /* text */
 .content__button-text h1 {
-    color: antiquewhite; 
+    color: whitesmoke; 
     font-size: 3.25em;
 }
 
@@ -57,8 +70,103 @@ body{
     text-align: center;
 }
 
+.content__button-btn:hover{
+    background-color: #199e43;
+}
+
+.content__button-btn a,
 .content__button-btn button{
     color: #1a2130;
     font-size: 1.10em;
     font-weight: bolder;
+}
+
+
+/* responsive designe */
+
+@media screen and (max-width: 768px) {
+    .content__button {
+        width: 63%;
+        left: 44%;
+    }
+
+    .content__button-text h1 {
+        font-size: 1.55em;
+    }
+
+    .content__button-btn {
+        padding: 5px 0px 5px 0px;
+    }
+
+}
+
+
+/* content form */
+
+.content__datos{
+    width: 100vw;
+    height: auto;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+.content__datos-width{
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content__datos-title h2{
+    color: #1a2130;
+    font-size: 3em !important;
+    text-align: center;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.content__datos-suntitle h3{
+    color: #1a2130;
+    font-size: 1.25em;
+    text-align: left;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    
+}
+
+.content__datos-cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content__datos-cards .datos-card {
+    width: 30%;
+    height: 246px;
+    filter:blur(3px);
+}
+
+
+
+.datos-card .card-header{
+    background-color: #784eb8;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.card-body input{
+    width: 100%;    
+}
+
+@media screen and (max-width: 992px) {
+    .content__datos-cards{
+        flex-direction: column;
+    }
+    .content__datos-cards .datos-card {
+        width: 100%;
+        height: 246px;    
+    }
 }

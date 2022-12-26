@@ -14,30 +14,163 @@
 </head>
 <body>
 
-    <!-- logo -->
-    <div class="content__logo">
-        <nav class="navbar navbar-light logo ">
-            <a class="navbar-brand" href="#">CREDIT</a>
-        </nav>
-    </div>
+    <section class="content__plantilla">
 
-    <section class="content__button">
 
-        <div class="content__button-text .text-monospace">
-            <h1>La plata que necesitás, 
-                para hacer los que querés. </h1>
-        </div>
-        
-        <div class="content__button-btn rounded-pill">
-            <button type="button" class="btn">Quiero mi préstamo</button>
+        <!-- logo -->
+        <div class="content__logo">
+            <nav class="navbar navbar-light logo ">
+                <a class="navbar-brand" href="#">CREDIT</a>
+            </nav>
         </div>
 
+        <section class="content__button">
+
+            <div class="content__button-text .text-monospace">
+                <h1>La plata que necesitás, 
+                    para hacer los que querés. </h1>
+            </div>
+            
+            <div class="content__button-btn rounded-pill">
+                <a href="#content__datos" class="btn">Quiero mi préstamo</a>
+            </div>
+
+        </section>
 
     </section>
 
 
-    
+    <section class="content__datos"> 
+        <a name="content__datos"></a>
 
+        <div class="content__datos-width">
+
+            <div class="content__datos-title">
+                <h2>Tu préstamo online, simple e inmediato</h2>
+            </div>
+
+            <div class="content__datos-suntitle">
+                <h3>Completa los siguientes datos...</h3>
+            </div>
+
+            <div class="content__datos-cards">
+
+                <div class="card mb-3 datos-card shadow bg-white rounded">
+                    <div class="card-header">Ingresa tu nombre y apellido</div>
+                    <div class="card-body">
+                        <label for=""> Nombre: 
+                            <input type="text" name="nombre" id="nombre">
+                        </label>
+                        <label for=""> apellido: 
+                            <input type="text" name="apellido" id="apellido">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card mb-3 datos-card shadow bg-white rounded">
+                    <div class="card-header">Ingresa tu edad</div>
+                    <div class="card-body">
+                        <label for=""> Edad: 
+                            <input type="number" name="edad" id="edad">
+                        </label>
+                        <P>Debes ser mayor de 18 años.</P>
+                    </div>
+                </div>
+
+                <div class="card mb-3 datos-card shadow bg-white rounded">
+                    <div class="card-header">Ingresa un email por favor</div>
+                    <div class="card-body">
+                        <label for=""> Email: 
+                            <input type="email" name="email" id="email" placeholder="ej: pedro@gmail.com">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card mb-3 datos-card shadow bg-white rounded">
+                    <div class="card-header">Ingresa tu Banco</div>
+                    <div class="card-body">
+                        <label for=""> Seleccione su banco: 
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected>Santander...</option>
+                                    <option value="Galicia">Galicia</option>
+                                    <option value="BBVA">BBVA</option>
+                                    <option value="BNA">BNA</option>
+                                    <option value="Otros bancos">Otros bancos</option>
+                                </select>
+                            </div>
+                        </label>
+                        <P>Seleccione el banco con el que operas.</P>
+                    </div>
+                </div>
+
+                <div class="card mb-3 datos-card shadow bg-white rounded">
+                    <div class="card-header">Cantidad de cuotas a devolver el crédito</div>
+                    <div class="card-body">
+                        <label for=""> Cuotas: 
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="inputGroupSelect02">
+                                    <option selected>3</option>
+                                    <option value="6">6</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <P>Podras elegir entre 3, 6 y 12 cuotas.</P>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card mb-3 datos-card shadow bg-white rounded">
+                    <div class="card-header">Ingresa el monto que desees solicitar</div>
+                    <div class="card-body">
+                        <label for=""> Cantidad a solicitar: 
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                                </div>
+                                <input type="number" id="monto" class="form-control">
+                            </div>
+                            <P>Desde $10.000 hasta $100.000</P>
+                        </label>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div>
+                <div class="content__button-btn rounded-pill" style="margin-bottom: 2em">
+                    <button type="submit" id="submit" data-toggle="modal" data-target="#exampleModal" class="btn">Enviar datos</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+
+                    </div>
+                    <div class="modal-body">
+                        Gracias ..... el crédito que solicitastaste por $.. a devolver en cuotas ... a depositar en el Banco ... ah sido preaprobado. 
+                        <br>
+                        <br>
+
+                        EN BREVE NOS COMUNICAREMOS CON USTED!!!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="content__button-btn rounded-pill" data-dismiss="modal">Salvar datos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     <!-- BOOTSTRAP JS 4.6 -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

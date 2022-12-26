@@ -20,15 +20,9 @@ body{
 
 
 /* logo */
-.content__logo {
-    width: 80vw;
+.content__logo{
     position: absolute;
-    left: 50%;
-    top: 5%;
-    transform: translate(-50%, -5%);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 150px;
+    top: -74%;
 }
 
 .content__logo .logo{
@@ -85,6 +79,9 @@ body{
 /* responsive designe */
 
 @media screen and (max-width: 768px) {
+    .content__logo{
+        top: -50%;    
+    }
     .content__button {
         width: 63%;
         left: 44%;

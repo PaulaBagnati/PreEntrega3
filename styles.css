@@ -18,7 +18,6 @@ body{
     height: 100vh;
 }
 
-
 /* logo */
 .content__logo{
     position: absolute;
@@ -52,7 +51,7 @@ body{
 /* text */
 .content__button-text h1 {
     color: whitesmoke; 
-    font-size: 3.25em;
+    font-size: clamp(1.5em, 8vw - 2em, 3em);
 }
 
 /* btn */
@@ -87,10 +86,6 @@ body{
         left: 44%;
     }
 
-    .content__button-text h1 {
-        font-size: 1.55em;
-    }
-
     .content__button-btn {
         padding: 5px 0px 5px 0px;
     }
@@ -116,7 +111,7 @@ body{
 
 .content__datos-title h2{
     color: #1a2130;
-    font-size: 3em !important;
+    font-size: clamp(1.5em, 8vw - 2em, 3em);
     text-align: center;
     margin-top: 1.25em;
     margin-bottom: 1.25em;
@@ -141,11 +136,24 @@ body{
 
 .content__datos-cards .datos-card {
     width: 30%;
-    height: 246px;
-    filter:blur(3px);
+    height: 305px;
+    
 }
 
+.filter{
+    filter: blur(3px);
+}
 
+.card-body a{
+    color: #199e43;    
+    font-weight: bolder;  
+    padding: auto;  
+}
+
+.card-body a:hover{
+    color:  black;
+    text-decoration: none;
+}
 
 .datos-card .card-header{
     background-color: #784eb8;
@@ -157,6 +165,9 @@ body{
 .card-body input{
     width: 100%;    
 }
+
+  
+
 
 @media screen and (max-width: 992px) {
     .content__datos-cards{
